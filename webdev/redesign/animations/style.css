@@ -1,0 +1,67 @@
+body {
+    background-color: lightslategrey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.face {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin-top: 20vw;
+    background-color: rgb(250, 199, 45);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.face::before {
+    content: '';
+    position: absolute;
+    top: 120px;
+    height: 50px;
+    width: 100px;
+    background: black;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+    transition: 0.5s;
+}
+
+.face:hover::before {
+    height: 50px;
+    width: 60px;
+    background: black;
+    border-radius: 100%;
+}
+
+.eyes {
+    position: relative;
+    top: -30px;
+    display: flex;
+
+}
+
+.eyes .eye {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    display: block;
+    background-color: white;
+    margin: 0 12px;
+    border-radius: 50%;
+}
+
+.eyes .eye::before {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    left: 20px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background-color: black;
+
+}
