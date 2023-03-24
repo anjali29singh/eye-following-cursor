@@ -1,5 +1,13 @@
 body {
-    background-color: rgb(248, 218, 218);
+    background-image: url('groceryimg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.grocery-project {
+    margin-left: 30vw;
 }
 
 .heading {
@@ -29,7 +37,8 @@ body {
 .quant-input-box {
     width: 100%;
     height: 5vw;
-    border: none;
+    border-color: greenyellow;
+    border-style: solid;
     padding-left: 10px;
     font-size: 20px;
 
@@ -66,14 +75,14 @@ body {
     color: crimson;
     margin-top: 20px;
     font-size: 2vw;
-    background-color: white;
+    background-color: azure;
     padding-left: 15px;
 }
 
 .info {
     color: blue;
     font-size: 2vw;
-    background-color: white;
+    background-color: azure;
     margin-top: 20px;
     padding-left: 15px;
 }
@@ -107,12 +116,12 @@ li {
     padding: 10px;
     width: 50%;
     list-style: none;
-    box-shadow: 0px 0px 5px 2px rgb(252, 168, 182);
+    box-shadow: 0px 0px 5px 2px green;
     transition: 300ms ease-in-out;
     height: 30px;
 }
 
-.item {
+.grocery-list-item {
     overflow: hidden;
     display: flex;
     justify-content: space-between;
@@ -134,6 +143,12 @@ li {
     pointer-events: none;
 }
 
+.done {
+    pointer-events: none;
+    cursor: pointer;
+    opacity: 0;
+}
+
 li:hover {
     transform: scale(1.05);
 
@@ -142,4 +157,24 @@ li:hover {
 li:hover .delete-btn {
     pointer-events: all;
     opacity: 1;
+}
+
+li:hover .done {
+    pointer-events: all;
+    opacity: 1;
+    color: green;
+}
+
+.delete-all {
+    display: flex;
+    justify-content: center;
+    color: crimson;
+    font-size: x-large;
+    background-color: rgb(117, 233, 237);
+}
+
+.delete-all:hover {
+    opacity: 0.8;
+    cursor: pointer;
+
 }
